@@ -1,0 +1,16 @@
+.fooBaz {
+  color: red;
+}
+.bar {
+  color: blue;
+}
+.my-class {
+  color: green;
+}
+
+li {
+  list-style-type: none;
+}
+body {
+  margin: 0;
+}
