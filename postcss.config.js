@@ -4,6 +4,7 @@ module.exports = {
       autoprefixer: {
         grid: true
       }
-    })
+    }),
+    require('cssnano')
   ]
 }
