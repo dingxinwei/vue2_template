@@ -2,6 +2,7 @@
   <div class="fooBaz bar">
     <div>{{ message }}</div>
     <div>123</div>
+    <Bar></Bar>
     <button @click="add">+</button>
     <ul>
       <li>
@@ -27,11 +28,13 @@
   import './styles.css'
   import Test from './components/test.js'
   import { HelloWorld, Button } from './components/test2.js'
+  import Bar from './components/Bar'
   export default {
     components: {
       Test,
       HelloWorld,
-      Button
+      Button,
+      Bar
     },
     data() {
       return {

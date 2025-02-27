@@ -141,14 +141,19 @@ module.exports = () => {
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
+          type: 'asset',
+          parser: {
+            dataUrlCondition: {
+              maxSize: 8192 // 替代url-loader的limit
+            }
+          },
           generator: {
             filename: 'img/[hash][ext][query]'
           }
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
-          type: 'asset/resource',
+          type: 'asset',
           generator: {
             filename: 'assets/[hash][ext][query]'
           }
