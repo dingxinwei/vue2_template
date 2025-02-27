@@ -1,11 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue Webpack</title>
-    <link href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.14/theme-chalk/index.css" rel="stylesheet">
+    <% if (process.env.NODE_ENV === 'production' &&
+    process.env.VUE_APP_PACKAGE_ENV === 'prod') { %>
+    <title>生产环境</title>
+    <% } else if (process.env.NODE_ENV === 'production' &&
+    process.env.VUE_APP_PACKAGE_ENV === 'nprod') { %>
+    <title>预发环境</title>
+    <% } else if (process.env.NODE_ENV === 'production' &&
+    process.env.VUE_APP_PACKAGE_ENV === 'test') { %>
+    <title>测试环境</title>
+    <% } else if (process.env.NODE_ENV === 'production' &&
+    process.env.VUE_APP_PACKAGE_ENV === 'dev') { %>
+    <title>开发环境</title>
+    <% } else { %>
+    <title>本地开发</title>
+    <% } %>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
   </head>
   <body>
     <div id="test"></div>

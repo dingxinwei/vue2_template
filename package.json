@@ -10,7 +10,10 @@
     "lint": "eslint --ext .js,.vue,.jsx src",
     "format": "prettier --write \"src/**/*.{js,vue,html,css,scss}\"",
     "lint:fix": "eslint --fix --ext .js,.vue,.jsx src",
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "build:prod": "cross-env NODE_ENV=production mode=prod webpack --mode production",
+    "build:test": "cross-env NODE_ENV=production mode=test webpack --mode production",
+    "build:dev": "cross-env NODE_ENV=production mode=dev webpack --mode production",
+    "build:nprod": "cross-env NODE_ENV=production mode=nprod webpack --mode production"
   },
   "keywords": [],
   "author": "",
